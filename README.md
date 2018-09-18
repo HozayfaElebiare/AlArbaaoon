@@ -1,2 +1,2 @@
 # AlArbaaoon
-Forty Hadith al-Nawawi Project
+Forty Hadith al-Nawawi

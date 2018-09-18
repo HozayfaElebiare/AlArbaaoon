@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>متن الأربعین النوویة</title>
+    <meta name="description" content="متن و ترجمه‌ی اربعین امام نووی"/>
+    <meta name="author" content="WebPajooh">
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="./assets/css/materialize.css" type="text/css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css"/>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/materialize.js"></script>
+    <script src="./assets/js/app.js"></script>
+</head>
+<body>
+    <header>
+        <div id="nav" class="z-depth-1">
+            <div class="container">
+                <a href="#" class="rtLink" goto="#home"><h1 class="logo">متن الأربعين النووية</h1></a>
+                <ul class="nav show-on-large hide-on-med-and-down">
+                    <li><a href="#" class="rtLink mnuHome" goto="#home" ismenu="yes">صفحه‌ی خانگی</a></li>
+                    <li><a href="#" class="rtLink mnuHadith" goto="#hadith" ismenu="yes">احادیث</a></li>
+                    <li><a href="#" class="rtLink mnuAbout" goto="#about" ismenu="yes">درباره‌ی کتاب</a></li>
+                    <li><a href="#" class="rtLink mnuBio" goto="#bio" ismenu="yes">بیوگرافی</a></li>
+                    <li><a href="#" class="rtLink mnuContact" goto="#contact" ismenu="yes">درباره‌ی پروژه</a></li>
+                </ul>
+                <div class="mobileMnuToggle no-select hide-on-large-only show-on-medium-and-down"><i class="material-icons">menu</i></div>
+                <ul class="mobileMenu z-depth-1 hide-on-large-only" style="display:none;">
+                    <li><a href="#" class="rtLink mnuHome" goto="#home" ismenu="yes">صفحه‌ی خانگی</a></li>
+                    <li><a href="#" class="rtLink mnuHadith" goto="#hadith" ismenu="yes">لیست احادیث</a></li>
+                    <li><a href="#" class="rtLink mnuAbout" goto="#about" ismenu="yes">درباره‌ی کتاب</a></li>
+                    <li><a href="#" class="rtLink mnuBio" goto="#bio" ismenu="yes">بیوگرافی</a></li>
+                    <li><a href="#" class="rtLink mnuContact" goto="#contact" ismenu="yes">درباره‌ی پروژه</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <ul class="breadcrumbUl"><li class="rtLink" goto="#home"><a href="#">متن الأربعین النوویة</a></li><li> » </li><li class="rtLink" goto="#home"><a href="#">صفحه‌ی خانگی</a></li></ul>
+        <div id="homeDiv" class="aaBox">
+            <div id="homeServicesBox">
+                <div class="row">
+                    <div class="serviceBox randomHadith z-depth-1 col l6 s12 no-select">
+                        <div class="serviceIcon"><i class="material-icons" style="font-size:32px !important;">touch_app</i></div>
+                        <h2 class="serviceTitle">یک حدیث</h2>
+                        <p class="serviceDesc">با انتخاب این گزینه، حدیثی به طور تصادفی انتخاب شده و نمایش داده می‌شود!</p>
+                    </div>
+                    <div class="serviceBox z-depth-1 col l6 s12 no-select rtLink" goto="#hadith">
+                        <div class="serviceIcon"><i class="material-icons">toc</i></div>
+                        <h2 class="serviceTitle">لیست احادیث اربعین</h2>
+                        <p class="serviceDesc">دیدن لیستی از احادیث به شما در یافتن موارد مورد نظر کمک می‌کند...</p>
+                    </div>
+                    <div class="serviceBox z-depth-1 col l6 s12 no-select rtLink" goto="#contact">
+                        <div class="serviceIcon"><i class="material-icons" style="font-size:32px !important; padding-top:4px !important;">info</i></div>
+                        <h2 class="serviceTitle">درباره‌ی پروژه و حمایت مالی</h2>
+                        <p class="serviceDesc">درباره‌ی این پروژه بیشتر بدانید، و آن را حمایت مالی کنید تا استمرار یابد!</p>
+                    </div>
+                    <div class="serviceBox z-depth-1 col l6 s12 no-select rtLink" goto="#bookmarks">
+                        <div class="serviceIcon"><i class="material-icons" style="font-size:33px !important;">star</i></div>
+                        <h2 class="serviceTitle">لیست علاقه‌مندی‌ها</h2>
+                        <p class="serviceDesc">احادیثی که قبلاً به لیست علاقه‌مندی‌ها اضافه کرده‌اید را مشاهده کنید!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="adsBox col l6 m12 s12 z-depth-1"><a href="http://alarbaaoon.gigfa.com/#contact"><img class="tooltipped" data-position="top" data-tooltip="محل تبلیغات شما" src="assets/img/ads1.gif" alt="ads"></a></div>
+                <div class="adsBox col l6 m12 s12 z-depth-1"><a href="http://alarbaaoon.gigfa.com/#contact"><img class="tooltipped" data-position="top" data-tooltip="محل تبلیغات شما" src="assets/img/ads1.gif" alt="ads"></a></div>
+            </div>
+            <p class="homeFooter center" style="margin-bottom:20px;">Copyright © 2018 WebPajooh</p>
+        </div>
+
+        <div id="hadithBox" class="box z-depth-1 aaBox" style="display:none;">
+            <div class="boxInner" style="padding-bottom:10px;">
+                <div id="hadithTitle">
+                    <div class="hadithNum no-select"></div>
+                    <h2 class="hadithTitle"></h2>
+                </div>
+                <p class="hadithText"></p>
+                <div class="hadithBoxBottom no-select">
+                    <i class="material-icons hadithSource tooltipped" data-position="top" data-tooltip="">book</i>
+                    <i class="material-icons hadithTashkil tooltipped" data-position="top" data-tooltip="مخفی‌کردن اعراب">zoom_out</i>
+                    <i class="material-icons hadithCopy tooltipped" data-position="top" data-tooltip="انتقال به حافظه">subject</i>
+                    <i class="material-icons soundIcon tooltipped" data-position="top" data-tooltip="دریافت قرائت صوتی" url="">surround_sound</i>
+                    <div class="hbbLeft">
+                        <i class="material-icons hadithBookmark tooltipped" data-position="top" data-tooltip="" bookmark="">star</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hadithTranslateBox" class="box z-depth-1 aaBox" style="display:none;">
+            <div class="boxInner">
+                <i class="material-icons fTitleIcon no-select">swap_horiz</i><h2 class="hadithFTitle"></h2>
+                <p class="hadithTranslate"></p>
+            </div>
+        </div>
+
+        <div id="hadithList" class="box z-depth-1 aaBox" style="display:none;">
+            <div class="boxInner">
+                <table class="hadithListTable striped responsive-table table-of-contents">
+                    <thead>
+                    <tr>
+                        <th>شماره‌ی حدیث</th>
+                        <th>عنوان عربی</th>
+                        <th>عنوان فارسی</th>
+                    </tr>
+                    </thead>
+                    <tbody class="hadithList"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="about" class="box z-depth-1 aaBox" style="display:none">
+            <div class="boxInner">
+                <div class="pageContent">
+                    <h2>درباره‌ی کتاب «الأربعون النوویة»</h2>
+                    <p>چهل‌حدیث‌نویسی از دیرباز میان دانشمندان اسلامی امری معروف بوده و گفته می‌شود که اولین بار امام عبد الله بن المبارک (181 هجری) و پس از ایشان محمد بن أسلم طوسی (242 هجری) چنین روشی را در تصنیف اختیار کرده‌اند و پس از ایشان بسیاری از اهل علم از این باب وارد شده و کتاب‌هایی در این زمینه تصنیف نمودند. لازم به ذکر است که گردآورندگان این کتب اهتمام به موضوع خاصی می‌کرده‌اند؛ گروهی در اصول دین و گروهی در فروع، گروهی در جهاد، در زهد و آداب و دیگر موضوعات تصنیف کرده و احادیث را در این موضوعات انتخاب می‌کرده‌اند.</p>
+                    <p>امام یحیی بن شرف النووی از جمله‌ی این عالمان و دانشمندان پرفروغ تاریخ اسلام بوده که به عالمان پیش از خود اقتدا و این اربعین را در قواعد عام دین جمع‌آوری کرده است، و در مقدمه‌ی کتاب می‌فرماید: «خود را ملتزم کرده‌ام که احادیث صحیح را جمع کنم و غالب این احادیث در صحیحین بخاری و مسلم هستند، اما اسناد احادیث را به منظور آسان‌شدن حفظشان و این‌که همگان از آن نفع ببرند، حذف کرده‌ام.»</p>
+                    <p>لازم به ذکر است که بعضی احادیث این کتاب مورد مناقشه‌ی حفاظ حدیث قرار گرفته‌اند، اما این عبارت امام نووی نشان از آن دارد که این احادیث نزد ایشان معتبر بوده و از قسم ضعیف نبوده است.</p>
+                    <p>اربعین امام نووی از مشهورترین کتاب‌های حدیثی است که توسط طالبین مبتدی حدیث حفظ می‌شود و جمعی از اهل علم به شرح احادیث آن پرداخته‌اند: برای نمونه حافظ ابن رجب حنبلی (795 هجری) در کتابی احادیث اربعین را آورده و هشت حدیث دیگر به آن افزوده است تا به پنجاه حدیث برسد، و شرح حافظ ابن دقیق العید (702 هجری) و نیز شیخ محمد ابن عثیمین (1421 هجری) از معاصرین مشهور است.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="bio" class="box z-depth-1 aaBox" style="display:none">
+            <div class="boxInner">
+                <div class="pageContent">
+                    <h2>بیوگرافی امام محیی‌الدین نووی</h2>
+                    <p>أبو زکریا یحیی بن شرف نووی، از فقیهان بلندپایه و محدثان بزرگ شافعی است؛ در محرم سال 631 هجری در روستای «نوا» که در نزدیکی دمشقِ سوریه است، دیده به جهان گشود و بر خواندن قرآن کریم رشد یافت. نووی در دمشق به طلب علم پرداخت و زمان طولانی در آنجا اقامت کرد، و تألیفات بسیار زیادی دارد که غالباً در «حدیث» و «فقه» هستند و کمتر کتاب‌خانه‌ای در جهان اسلام وجود دارد که کتاب‌های مربوط به علوم اسلامی را گردآورده، اما از کتاب‌های او خالی باشند.</p>
+                    <p>دقت در آثار امام نووی با توجه به عمر چهل و پنج ساله‌ی او نشان از حرص بر طلب علم و همت در این مسیر دارد و همین همت و البته اخلاص بود که نووی را امام و پیشوایی بزرگ قرار داد که تا امروز بسیاری بر کتاب‌های ایشان در طلب علم رشد می‌کنند و از وی بی‌نیاز نیستند! گفته می‌شود که روزانه دوازده درس مختلف را در فقه، حدیث، اصول، رجال و باقی علوم می‌خوانده و نکات مهم را یادداشت می‌کرده و چنین روحیه‌ای در تاریخ اسلام کم‌نظیر است و تلاش خستگی‌ناپذیر امام نووی را هویدا می‌سازد، چرا که خواندن سه درس در روز برای بسیاری از مردم خسته‌کننده و ملال‌آور است، چه رسد به این‌که به دوازده درس برسد و به همراه حفظ و اتقان و یادداشت‌کردن فوائد و نکات باشد!</p>
+                    <p>از جمله کتاب‌های مشهور امام نووی عبارتند از: «التقریب والتیسیر» در فن مصطلح، «المنهاج» در شرح صحیح مسلم، «الأربعون» و «ریاض الصالحین» در حدیث، «منهاج الطالبین» و «شرح المهذب» در فقه، و کتاب‌های بسیار دیگری که برای طولانی‌نشدن این نوشتار از ذکر آن‌ها چشم‌پوشی می‌کنیم.</p>
+                    <p>امام نووی در سال 676 هجری وفات کرده و در زادگاه خود، یعنی «نوا»، دفن شدند، خداوند او را رحمت کرده و پاداش بسیار دهد.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="box z-depth-1 aaBox" style="display:none;">
+            <div class="boxInner">
+                <div class="pageContent">
+                    <h2>متن الأربعین النوویة - نسخه‌ی اول</h2>
+                    <h3>طراح و توسعه‌دهنده: «وب‌پژوه»</h3>
+                    <p>هدف این بود که بتوان احادیث موجود در کتاب «الأربعون النوویة» را به همراه ترجمه‌ی فارسی، به شکل یک وب‌سایت اینترنتی آماده کرد تا مورد استفاده‌ی کاربران قرار گیرد و شاید گامی برای توسعه‌های بعدی برداشته شود. این پروژه در بستر Github متولد و با Jquery به کار مشغول شد و هیچ اسکریپت سمت سروری در کار نیست، تمام کارها فرانت‌اند انجام می‌شود و یکی از دلائل سرعت بالای آن، همین امر است.</p>
+                    <p style="font-weight:bold;">راه‌های ارتباط و دنبال‌کردن:</p>
+                    <a href="https://github.com/webpajooh">حساب گیت‌هاب</a><br>
+                    <a href="https://t.me/WebPajooh">کانال تلگرام</a><br>
+                    <a href="https://t.me/WPSupport01">حساب تلگرام</a><br>
+                    <p style="font-weight:bold;">حمایت مالی:</p>
+                    برای حمایت مالی از توسعه‌دهنده، می‌توانید مبلغی (از ده هزار ریال به بالا) را از طریق فرم زیر به حساب توسعه‌دهنده واریز کنید:</p>
+                    <div class="payForm">
+                        <input id="payAmount" class="input" type="text" placeholder="مبلغ به ریال">
+                        <button class="paySubmit waves-effect waves-light">پرداخت</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bookmarks" class="aaBox" style="display:none;">
+            <div class="box z-depth-1">
+                <div class="boxInner">
+                    <table class="bookmarksTable striped responsive-table table-of-contents">
+                        <thead>
+                        <tr>
+                            <th>شماره‌ی حدیث</th>
+                            <th>عنوان عربی</th>
+                            <th>عنوان فارسی</th>
+                        </tr>
+                        </thead>
+                        <tbody class="bookmarksContainer"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="error" class="box z-depth-1 aaBox" style="display:none;">
+            <div class="boxInner">
+                <div class="pageContent">
+                    <h2 class="errorTitle">خطای 404: صفحه‌ی درخواستی وجود ندارد!</h2>
+                    <p class="errorText">به نظر می‌رسد که شما به طور دستی مقداری که در سیستم تعیین نشده را وارد کرده‌اید و در این حالت طبیعی است که با چنین صفحه‌ای مواجه شوید! اگر حدس ما درست نیست و شما به طور دستی آدرس‌ها را تغییر نداده‌اید، این مورد را به ما اطلاع دهید تا رفع گردد.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="z-depth-5" style="display:none;">
+        <div class="container">
+            <div class="row">
+                <center><div class="col l3 s12 right"><div class="navaviLogo"></div></div></center>
+                <div class="col l3 s12 right">
+                    <ul class="footerList">
+                        <li class="footerMnu fm1"><a class="rtLink" goto="#hadith" href="#">لیست احادیث</a></li>
+                        <li class="footerMnu fm2"><a class="rtLink" goto="#about" href="#">درباره‌ی اربعین</a></li>
+                        <li class="footerMnu fm3"><a class="rtLink" goto="#bio" href="#">بیوگرافی</a></li>
+                    </ul>
+                </div>
+                <div class="col l6 s12"><p class="footerText">هدف این بود که بتوان احادیث موجود در کتاب «الأربعون النوویة» را به همراه ترجمه‌ی فارسی، به شکل یک وب‌سایت اینترنتی آماده کرد تا مورد استفاده‌ی کاربران قرار گیرد و شاید گامی برای توسعه‌های بعدی برداشته شود. این پروژه در بستر Github متولد و با Jquery به کار مشغول شد و هیچ اسکریپت سمت سروری در کار نیست، تمام کارها فرانت‌اند انجام می‌شود و یکی از دلائل سرعت بالای آن، همین امر است.</p><a href="https://github.com/webpajooh"><p class="footerWebPajooh">طراحی و توسعه: وب‌پژوه</p></a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
