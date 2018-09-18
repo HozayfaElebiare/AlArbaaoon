@@ -125,6 +125,7 @@ window.onhashchange = function(){
             $('.mnuContact').addClass('actived');
             break;
         case "#bookmarks":
+            refreshBookmarkList();
             if (bookmarks.length==0){
                 setHash("#home");
                 M.toast({html: 'لیست علاقه‌مندی‌ها خالی است!'});
@@ -256,8 +257,6 @@ $(document).ready(function(){
        }
        $('#payAmount').val('');
     });
-    // Load Bookmark List
-    if (getCookie('AlArbaaoonBookmark')!=''){refreshBookmarkList();}
     // Mobile Menu
     $('.mobileMnuToggle').click(function(){
         $('.mobileMenu').fadeToggle("fast", "linear");

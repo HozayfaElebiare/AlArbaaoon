@@ -97,20 +97,7 @@ header{
     left:7%;
     z-index:9999999;
 }
-.mobileMenu:after{
-    bottom: 100%;
-    left: 20%;
-    border: solid transparent;
-    content:" ";
-    height:0;
-    width:0;
-    position:absolute;
-    pointer-events:none;
-    border-color:rgba(136, 183, 213, 0);
-    border-bottom-color:#F4F4F4;
-    border-width:15px;
-    margin-left:-15px;
-}
+.mobileMenu:after{bottom: 100%; left: 20%; border: solid transparent; content:" "; height:0; width:0; position:absolute; pointer-events:none; border-color:rgba(136, 183, 213, 0); border-bottom-color:#F4F4F4; border-width:15px; margin-left:-15px;}
 .mobileMenu li a{
     display:block;
     color:#333;
