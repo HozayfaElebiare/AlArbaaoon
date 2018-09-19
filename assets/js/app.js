@@ -172,6 +172,7 @@ window.onhashchange = function(){
                 M.toast({html: 'خطایی رخ داد!'});
             }
     }
+    $("html, body").animate({ scrollTop: 0 }, "slow");
 };
 
 $(document).ready(function(){
