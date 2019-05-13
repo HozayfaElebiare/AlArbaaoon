@@ -1,10 +1,10 @@
 /*
-    Variables
+    letiables
 */
-var hadith={};
-var bookmarks=[];
-var tashkilToggle=true;
-var appURL = location.href.replace(location.hash,"");
+let hadith={};
+let bookmarks=[];
+let tashkilToggle=true;
+let appURL = location.href.replace(location.hash,"");
 $.getJSON(appURL+"content/hadith.json", function(data){hadith=data;});
 
 /*
@@ -32,9 +32,9 @@ function arabicClr(text){
     return text;
 }
 
-function setCookie(cname, cvalue, exdays){var d = new Date(); d.setTime(d.getTime() + (exdays*24*60*60*1000)); var expires = "expires="+ d.toUTCString(); document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";}
-function getCookie(cname){var name = cname + "="; var decodedCookie = decodeURIComponent(document.cookie); var ca = decodedCookie.split(';'); for(var i = 0; i <ca.length; i++) {var c = ca[i]; while (c.charAt(0) == ' ') {c = c.substring(1);}if (c.indexOf(name) == 0) {return c.substring(name.length, c.length);}}return "";}
-function cleanArray(actual){var newArray = new Array(); for (var i = 0; i < actual.length; i++) {if (actual[i]) {newArray.push(actual[i]);}}return newArray;}
+function setCookie(cname, cvalue, exdays){let d = new Date(); d.setTime(d.getTime() + (exdays*24*60*60*1000)); let expires = "expires="+ d.toUTCString(); document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";}
+function getCookie(cname){let name = cname + "="; let decodedCookie = decodeURIComponent(document.cookie); let ca = decodedCookie.split(';'); for(let i = 0; i <ca.length; i++) {let c = ca[i]; while (c.charAt(0) == ' ') {c = c.substring(1);}if (c.indexOf(name) == 0) {return c.substring(name.length, c.length);}}return "";}
+function cleanArray(actual){let newArray = new Array(); for (let i = 0; i < actual.length; i++) {if (actual[i]) {newArray.push(actual[i]);}}return newArray;}
 
 /*
     Bookmarking
@@ -42,7 +42,7 @@ function cleanArray(actual){var newArray = new Array(); for (var i = 0; i < actu
 function refreshBookmarkList(){
     bookmarks = JSON.parse(getCookie('AlArbaaoonBookmark'));
     $('.bookmarksContainer').html('');
-    var i=0;
+    let i=0;
     while(bookmarks[i]){
         hid = parseInt(bookmarks[i]);
         hadithTitle = hadith[hid-1].title;
@@ -56,15 +56,15 @@ function refreshBookmarkList(){
     }
 }
 function saveBookmarks(){
-    var newArray = cleanArray(bookmarks);
-    var bookmarkStr = JSON.stringify(newArray);
+    let newArray = cleanArray(bookmarks);
+    let bookmarkStr = JSON.stringify(newArray);
     setCookie('AlArbaaoonBookmark', bookmarkStr, 365);
 }
 function hadithAddToBookmark(id){
     bookmarks.push(id);
 }
 function hadithRemoveFromBookmark(id){
-    var hadithIndex = bookmarks.indexOf(id);
+    let hadithIndex = bookmarks.indexOf(id);
     delete bookmarks[hadithIndex];
 }
 
@@ -143,13 +143,13 @@ window.onhashchange = function(){
             break;
     }
     if (hash.substring(0,8)=="#hadith:"){
-            var hadithID = parseInt(hash.substring(8,10))-1;
+            let hadithID = parseInt(hash.substring(8,10))-1;
             $('.aaBox, .hadithTitle, .hadithText').hide();
             if (hadithID+1<=42 && hadithID+1>=1){
                 $('.hadithNum').html(hadith[hadithID].id);
                 $('.hadithTitle').html(hadith[hadithID].title);
                 if (tashkilToggle==false){
-                    var newText = arabicClr(hadith[hadithID].text);
+                    let newText = arabicClr(hadith[hadithID].text);
                     $('.hadithText').html(newText);
                 }else{
                     $('.hadithFTitle').html('ترجمه: ' + hadith[hadithID].fTitle);
@@ -178,7 +178,7 @@ window.onhashchange = function(){
 $(document).ready(function(){
     // onLoad Routing
     if (getHash()!=''){
-        var h = getHash();
+        let h = getHash();
         h = h.substring(1, h.length);
         setHash('#loading');
         setHash(h);
@@ -187,7 +187,7 @@ $(document).ready(function(){
     $('.tooltipped').tooltip();
     // Routing Links Class
     $(document).on('click','.rtLink', function(){
-        var goto = $(this).attr('goto');
+        let goto = $(this).attr('goto');
         setHash(goto);
         $('.rtLink').removeClass('actived');
         if ($(this).attr('ismenu')=='yes'){
@@ -199,12 +199,12 @@ $(document).ready(function(){
     // Tashkil (Toggle)
     $('.hadithTashkil').click(function(){
         if (tashkilToggle){
-            var newText = arabicClr($('.hadithText').text());
+            let newText = arabicClr($('.hadithText').text());
             $('.hadithText').html(newText);
             $(this).attr('data-tooltip', 'نمایش اعراب').html('zoom_in');
             tashkilToggle=false;
         }else{
-            var hadithID = parseInt($('.hadithNum').text())-1;
+            let hadithID = parseInt($('.hadithNum').text())-1;
             $('.hadithText').html(hadith[hadithID].text);
             $(this).attr('data-tooltip', 'مخفی‌کردن اعراب').html('zoom_out');
             tashkilToggle=true;
@@ -212,8 +212,8 @@ $(document).ready(function(){
     });
     // Copy it!
     $('.hadithCopy').click(function(){
-        var temp = $("<input style='width:0px;height:0px;'>");
-        var text = $('.hadithText').text();
+        let temp = $("<input style='width:0px;height:0px;'>");
+        let text = $('.hadithText').text();
         $("body").append(temp);
         temp.val(text);
         temp.select();
@@ -228,7 +228,7 @@ $(document).ready(function(){
     });
     // Bookmark Button
     $('.hadithBookmark').click(function(){
-        var hadithNumber = $('.hadithNum').text();
+        let hadithNumber = $('.hadithNum').text();
         if ($(this).attr('bookmark')=='yes'){
             $(this).attr('bookmark', 'no').css('transform', 'rotateY(0deg)');
             hadithRemoveFromBookmark(hadithNumber);
@@ -245,12 +245,12 @@ $(document).ready(function(){
     });
     // Random Hadith Selection
     $('.randomHadith').click(function(){
-        var rndNumber = Math.floor(Math.random() * 41) + 1;
+        let rndNumber = Math.floor(Math.random() * 41) + 1;
         setHash("#hadith:"+rndNumber.toString());
     });
     // Pay Button
     $('.paySubmit').click(function(){
-       var amount = parseInt($('#payAmount').val());
+       let amount = parseInt($('#payAmount').val());
        if ($.isNumeric(amount)){
            window.open('https://idpay.ir/webpajooh?amount='+amount+'&desc=حمایت مالی از توسعه‌دهنده‌ی متن الأربعین النوویة', "حمایت مالی");
        }else{
